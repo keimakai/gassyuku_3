@@ -1,29 +1,29 @@
 io = new RocketIO().connect();
 
+
+io.on("connect", function(){
+  console.log("connect!! "+io.session);
+});
+
+io.on("clients", function(data){
+  console.log(data);
+  $("#clients").text("websocket:"+data.websocket+" comet:"+data.comet);
+});
+   
 // push "hello" to server
 $(function(){
-  $("#btn").click(function(){
-    var message = $("#text").val();
+
+  $("#view001").keyup(function(){
+    var message = $("#view001").val();
     io.push("hello", message);
   });
 
 
-
-  $("#btn2").click(function(){
-    var message = $("#text").val();
-    io.push("hello2", message);
-  });
-
 });
+
+
 
 
 io.on("eeee", function(message){
-  // alert(message);
-  $("#log").prepend( $("<p>").text(message) );
-});
-
-
-io.on("eeee2", function(message){
-   alert(message);
-  //$("#log").prepend( $("<p>").text(message) );
+  $("#view002").html(message);
 });

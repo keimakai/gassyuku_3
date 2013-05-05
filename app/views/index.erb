@@ -1,16 +1,30 @@
-<html>
+<!DOCTYPE HTML>
+<html lang="ja">
+
   <head>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
     <script src="jquery.js"></script>
     <script src="<%= rocketio_js %>"></script>
     <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>タイトル</title>
+    <meta name="viewport" content="width=1000px, user-scalable=yes" />
+        
   </head>
-  <body>
-    <h1>RocketIO hello world</h1>
-    <input type="text" id="text" value="hello!!!"></input>
-    <input type="button" id="btn" value="push"></input>
-    <input type="button" id="btn2" value="btn2"></input> 
-   <div id="log"></div>
-    <hr />
-    <p><a href="https://github.com/shokai/rocketio-hello-world">https://github.com/shokai/rocketio-hello-world</a></p>
-  </body>
+
+  <body>    
+    <div id="logo"></div>
+    <div id="wrapper">
+      <div id="header"></div>
+      <div id="main">
+        <div id="slide">
+          <input type="text" class = "h1" id="view001" value="タイトル">
+          <textarea class = "p" id="view002" >てすと</textarea>
+        </div>
+      </div>
+      <div id="footer">  <p>Footer</p>    </div>
+    </div>    
+  </body>       
 </html>
