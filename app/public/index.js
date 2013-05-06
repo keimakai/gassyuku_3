@@ -23,7 +23,6 @@ $(function(){
 
 
 
-
 io.on("eeee", function(message){
   $("#view002").html(message);
 });
