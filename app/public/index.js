@@ -20,5 +20,5 @@ io.on("eeee", function(message){
 
 io.on("eeee2", function(message){
   console.log("eeee received :"+message);
-  $("#view002").html(message);
+  $("#view002").val(message);
 });

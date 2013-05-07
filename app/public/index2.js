@@ -19,8 +19,8 @@ $(function(){
   });
 
 
-$("#view002").keyup(function(){
-    var message = $("#view002").html;
+  $("#view002").keyup(function(){
+    var message = $("#view002").val();
     io.push("hello2", message);
   });
 
