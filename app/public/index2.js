@@ -19,10 +19,12 @@ $(function(){
   });
 
 
+$("#view002").keyup(function(){
+    var message = $("#view002").html;
+    io.push("hello2", message);
+  });
+
+
 });
 
 
-
-io.on("eeee", function(message){
-  $("#view002").html(message);
-});

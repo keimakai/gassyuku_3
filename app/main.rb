@@ -12,7 +12,11 @@ io.on :hello do |message, client|
 end
 
 
+io.on :hello2 do |message, client|
 
+  puts "> receive '#{message}' from #{client.session}"
+  io.push :eeee2, message
+end
 
 
 
